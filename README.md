@@ -1,3 +1,7 @@
+This is fork of [kazegusuri/go-prot-zap-marshaler](https://github.com/kazegusuri/go-proto-zap-marshaler)
+
+We have just reversed secure logic, for now in secure mode plugin generates writes for all fields except marked with `enabled:true`
+
 # go-proto-zap-marshaler
 
 A protoc plugin whitch generates `MarshalLogObject()` functions for each generated go structs to implement `zapcore.ObjectMarshaler` interface for [uber-go/zap](https://github.com/uber-go/zap). So you can use `zap.Object("proto", someProtoMessage)` to log contents of the proto message.
