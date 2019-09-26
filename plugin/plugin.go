@@ -74,7 +74,7 @@ func (p *plugin) generateProto3Message(file *generator.FileDescriptor, message *
 
 	for _, field := range message.Field {
 		// see the field option only when secure option is true.
-		if p.secure && !isTarget(field) {
+		if p.secure && isTarget(field) {
 			continue
 		}
 
